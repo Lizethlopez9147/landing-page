@@ -8,18 +8,15 @@
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background-color: #0d1b2a; /* Dark Blue */
-      color: white;
+      background-color: white;
+      color: #0d1b2a;
     }
 
     header {
-      background-color: #5d4b8b; /* Light Purple */
+      background-color: #5d4b8b;
+      color: white;
       padding: 2rem;
       text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
     }
 
     nav {
@@ -39,39 +36,78 @@
       padding: 2rem;
     }
 
+    h2 {
+      text-align: center;
+      color: #5d4b8b;
+    }
+
+    .services-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
     .service {
-      background-color: #1b263b;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      border-radius: 10px;
+      background-color: #f1f1f1;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .service h3 {
+      color: #0d1b2a;
+    }
+
+    .price {
+      color: #5d4b8b;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-top: 1rem;
     }
 
     .contact-form {
-      background-color: #1b263b;
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: #f9f9f9;
       padding: 2rem;
-      border-radius: 10px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     input, textarea {
       width: 100%;
-      padding: 0.5rem;
+      padding: 0.75rem;
       margin-top: 0.5rem;
       margin-bottom: 1rem;
-      border: none;
-      border-radius: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
     }
 
     button {
-      padding: 0.75rem 1.5rem;
+      width: 100%;
+      padding: 0.75rem;
       background-color: #5d4b8b;
       color: white;
       border: none;
-      border-radius: 5px;
+      border-radius: 6px;
       cursor: pointer;
+      font-size: 1rem;
     }
 
     button:hover {
       background-color: #7a5fb5;
+    }
+
+    small {
+      display: block;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    a {
+      color: #5d4b8b;
     }
   </style>
 </head>
@@ -92,55 +128,58 @@
 <section>
   <h2>Our Services</h2>
 
-  <div class="service">
-    <h3>Free Trial – “Let’s Get to Know Each Other!”</h3>
-    <ul>
-      <li>One-time 20-minute session</li>
-      <li>Intro chat + mini lesson</li>
-      <li>Talk about your goals & level</li>
-      <li>No commitment required</li>
-    </ul>
-  </div>
+  <div class="services-container">
+    <div class="service">
+      <h3>Free Trial – “Let’s Get to Know Each Other!”</h3>
+      <ul>
+        <li>One-time 20-minute session</li>
+        <li>Intro chat + mini lesson</li>
+        <li>Talk about your goals & level</li>
+        <li>No commitment required</li>
+      </ul>
+    </div>
 
-  <div class="service">
-    <h3>Starter Package – "Basics & Conversation Boost"</h3>
-    <p>Great for casual learners or beginners of any age</p>
-    <ul>
-      <li>1 class/week (45 minutes)</li>
-      <li>Focus: Vocabulary, pronunciation, and simple conversation</li>
-      <li>Light and fun pace</li>
-      <li>Flexible scheduling</li>
-    </ul>
-  </div>
+    <div class="service">
+      <h3>Starter Package – "Basics & Conversation Boost"</h3>
+      <p>Great for casual learners or beginners of any age</p>
+      <ul>
+        <li>1 class/week (45 minutes)</li>
+        <li>Focus: Vocabulary, pronunciation, and simple conversation</li>
+        <li>Light and fun pace</li>
+        <li>Flexible scheduling</li>
+      </ul>
+      <div class="price">$70/month</div>
+    </div>
 
-  <div class="service">
-    <h3>Standard Package – "Level Up Your Language"</h3>
-    <ul>
-      <li>2 classes/week (1 hour each)</li>
-      <li>Focus: Grammar, writing, reading, and conversation</li>
-      <li>Personalized lessons based on age and goals</li>
-      <li>Weekly progress check-ins</li>
-    </ul>
-    <p><strong>Price: $110/month</strong></p>
-  </div>
+    <div class="service">
+      <h3>Standard Package – "Level Up Your Language"</h3>
+      <ul>
+        <li>2 classes/week (1 hour each)</li>
+        <li>Focus: Grammar, writing, reading, and conversation</li>
+        <li>Personalized lessons based on age and goals</li>
+        <li>Weekly progress check-ins</li>
+      </ul>
+      <div class="price">$110/month</div>
+    </div>
 
-  <div class="service">
-    <h3>Premium Package – "Fluent & Confident"</h3>
-    <ul>
-      <li>3 classes/week (1 hour each)</li>
-      <li>Advanced practice in speaking, listening, and comprehension</li>
-      <li>Includes school help or work-related language support</li>
-      <li>Extra learning materials: PDFs, practice activities, and quizzes</li>
-    </ul>
-    <p><strong>Price: $170/month</strong></p>
+    <div class="service">
+      <h3>Premium Package – "Fluent & Confident"</h3>
+      <ul>
+        <li>3 classes/week (1 hour each)</li>
+        <li>Advanced practice in speaking, listening, and comprehension</li>
+        <li>Includes school help or work-related language support</li>
+        <li>Extra learning materials: PDFs, practice activities, and quizzes</li>
+      </ul>
+      <div class="price">$170/month</div>
+    </div>
   </div>
 </section>
 
 <section>
   <h2>Contact Me</h2>
-  <p>Have questions or want to get started? Contact me anytime – I’d love to chat!</p>
-  <p>Email: <a href="mailto:Lizlopez9147@gmail.com">Lizlopez9147@gmail.com</a></p>
-  
+  <p style="text-align: center;">Have questions or want to get started? Contact me anytime – I’d love to chat!</p>
+  <p style="text-align: center;">Email: <a href="mailto:Lizlopez9147@gmail.com">Lizlopez9147@gmail.com</a></p>
+
   <form class="contact-form" action="https://formsubmit.co/Lizlopez9147@gmail.com" method="POST">
     <input type="text" name="name" placeholder="Your Name" required />
     <input type="email" name="email" placeholder="Your Email" required />
@@ -150,8 +189,9 @@
     <input type="hidden" name="_template" value="table">
   </form>
 
-  <p><small>Thank you for your interest! Please allow 1-2 business days for an answer.</small></p>
+  <small>Thank you for your interest! Please allow 1-2 business days for an answer.</small>
 </section>
 
 </body>
 </html>
+
